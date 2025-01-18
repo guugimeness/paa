@@ -4,7 +4,7 @@ import subprocess
 # Caminhos para as pastas
 pasta_entradas = "./input"
 pasta_solucoes = "./solucoes"
-programa = "./crush.c"  # Seu programa para resolver as instâncias
+programa = "./crush_grandes.c"  # Seu programa para resolver as instâncias
 
 # Função para comparar os resultados
 def comparar_resultados(saida_gerada, saida_esperada):
@@ -30,7 +30,7 @@ for arquivo_entrada in sorted(os.listdir(pasta_entradas)):
         
         # Executar o programa
         resultado = subprocess.run(
-            ["./crush"], 
+            ["./crush_grandes"], 
             input=open(caminho_entrada, "r").read(),
             text=True,
             capture_output=True
